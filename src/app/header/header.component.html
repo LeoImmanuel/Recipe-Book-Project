@@ -5,26 +5,26 @@
   </button>
   <div id="navbarNavDropdown" class="navbar-collapse collapse">
       <ul class="navbar-nav mr-auto">
-          <li class="nav-item">
-              <a class="nav-link" href="#" (click)="onSelect('recipe')">Recipes
-                <!-- <span class="sr-only">(current)</span> -->
-              </a>
+          <li class="nav-item" routerLinkActive="active">
+              <!-- <a class="nav-link" href="#" (click)="onSelect('recipe')">Recipes</a> -->
+              <a class="nav-link" routerLink="/recipes" >Recipes</a>
           </li>
-          <li class="nav-item">
-              <a class="nav-link" href="#" (click)="onSelect('shopping-list')">Shopping List</a>
+          <li class="nav-item" routerLinkActive="active">
+              <!-- <a class="nav-link" href="#" (click)="onSelect('shopping-list')">Shopping List</a> -->
+              <a class="nav-link" routerLink="/shopping-list" >Shopping List</a>
           </li>
 
       </ul>
-      <ul class="navbar-nav">
+      <ul class="navbar-nav" style="cursor: pointer;">
           <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <a class="nav-link dropdown-toggle"  id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Manage
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                   <!-- Dropdown Directive -->
               <!-- <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" appDropdown> -->
-                  <a class="dropdown-item" href="#">Save Data</a>
-                  <a class="dropdown-item" href="#">Fetch Data</a>
+                  <a class="dropdown-item">Save Data</a>
+                  <a class="dropdown-item">Fetch Data</a>
               </div>
           </li>
           <!-- <li class="nav-item">

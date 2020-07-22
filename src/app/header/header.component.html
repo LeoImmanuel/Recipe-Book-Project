@@ -6,11 +6,9 @@
   <div id="navbarNavDropdown" class="navbar-collapse collapse">
       <ul class="navbar-nav mr-auto">
           <li class="nav-item" routerLinkActive="active">
-              <!-- <a class="nav-link" href="#" (click)="onSelect('recipe')">Recipes</a> -->
               <a class="nav-link" routerLink="/recipes" >Recipes</a>
           </li>
           <li class="nav-item" routerLinkActive="active">
-              <!-- <a class="nav-link" href="#" (click)="onSelect('shopping-list')">Shopping List</a> -->
               <a class="nav-link" routerLink="/shopping-list" >Shopping List</a>
           </li>
 
@@ -21,10 +19,8 @@
                 Manage
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                  <!-- Dropdown Directive -->
-              <!-- <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" appDropdown> -->
-                  <a class="dropdown-item">Save Data</a>
-                  <a class="dropdown-item">Fetch Data</a>
+                  <a class="dropdown-item" (click)="onSaveData()">Save Data</a>
+                  <a class="dropdown-item" (click)="onFetchData()">Fetch Data</a>
               </div>
           </li>
           <!-- <li class="nav-item">

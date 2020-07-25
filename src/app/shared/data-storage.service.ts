@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { map, tap, take, exhaustMap } from 'rxjs/operators';
 
 import { Recipe } from '../recipes/recipe.model';
@@ -24,7 +24,11 @@ export class dataStorageService{
     fetchRecipe(){
         // Adding Tokens to Ongoing Requests
         return this.authService.user.pipe(take(1), exhaustMap( user =>{
-            return this.http.get<Recipe[]>('https://recipestore-20366.firebaseio.com/recipes.json?auth=' + user.token);
+            return this.http.get<Recipe[]>('https://recipestore-20366.firebaseio.com/recipes.json',
+            {
+                params: new HttpParams().set('auth', user.token)
+            }
+            );
         }),
             map( recipes => {
                 return recipes.map(recipe => {
